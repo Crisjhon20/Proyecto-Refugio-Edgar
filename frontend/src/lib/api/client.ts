@@ -1,6 +1,6 @@
 import { clearSession, getToken } from '../auth/session';
 
-const API_URL = import.meta.env.PUBLIC_API_URL ?? 'http://localhost:3000';
+const API_URL = import.meta.env.PUBLIC_API_URL ?? '/api';
 
 export class ApiError extends Error {
   constructor(public readonly status: number, message: string, public readonly details?: unknown) {
