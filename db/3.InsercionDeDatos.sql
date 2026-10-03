@@ -1,6 +1,13 @@
-INSERT INTO "RegistroDeCliente" (identificador, usuario, contrasena, perfil)
-VALUES
-    (1, 'zumodev', '$2b$08$R2o3DSJNDsOF8HEr.jbZH.mNbMHsHhWzxRjuC5lXY4qBbL/LDPIM2', 'administrador');
+INSERT INTO "Administrador" (
+    "Identificador",
+    "Usuario",
+    "Contrasena"
+)
+VALUES (
+    1,
+    'zumodev',
+    '$2b$08$R2o3DSJNDsOF8HEr.jbZH.mNbMHsHhWzxRjuC5lXY4qBbL/LDPIM2'
+);
 
 INSERT INTO "Animal" (
     "Identificador",
