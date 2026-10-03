@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import Brand from '../components/layout/Brand.astro';
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Refugio | Administracion</title>
+  </head>
+  <body class="bg-cream min-h-screen">
+    <div class="min-h-screen lg:grid lg:grid-cols-[280px_1fr]">
+      <aside class="hidden bg-teal-950 p-7 text-white lg:flex lg:flex-col">
+        <Brand light />
+        <nav class="mt-16 space-y-2" aria-label="Navegacion principal">
+          <a class="focus-ring flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold" href="/dashboard">Todos los animales</a>
+          <a class="focus-ring flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-white/65 transition hover:bg-white/10 hover:text-white" href="/dashboard/animals/new">Registrar animal</a>
+        </nav>
+        <div class="mt-auto rounded-3xl border border-white/10 bg-white/5 p-5 text-sm text-white/70">
+          <p class="font-bold text-yellow-300">Cuidar es transformar.</p>
+          <p class="mt-2 leading-6">Cada registro nos acerca a un nuevo hogar.</p>
+        </div>
+        <button data-logout-button class="focus-ring mt-5 flex items-center gap-3 px-4 py-3 text-left text-sm font-bold text-white/60 transition hover:text-white">Cerrar sesion <span aria-hidden="true">↗</span></button>
+      </aside>
+      <main class="min-w-0"><div class="flex items-center justify-between border-b border-teal-900/10 bg-cream px-5 py-4 lg:hidden"><Brand /><button data-logout-button class="focus-ring rounded-full px-3 py-2 text-xs font-extrabold text-teal-800">Salir</button></div><slot /></main>
+    </div>
+    <script>
+      import '../scripts/dashboard-shell';
+    </script>
+  </body>
+</html>

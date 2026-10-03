@@ -1,0 +1,15 @@
+---
+interface Props { mode?: 'create' | 'edit'; animal?: { id: number; nombre: string; raza: string; edad: number; sexo: string; tipoAnimal: string } }
+const { mode = 'create', animal } = Astro.props;
+---
+<form id="animal-form" data-mode={mode} data-id={animal?.id ?? ''} class="space-y-6">
+  <div id="form-error" class="hidden rounded-2xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700"></div>
+  <div class="grid gap-5 sm:grid-cols-2">
+    <label class="space-y-2 text-sm font-bold text-teal-950">Nombre<input name="nombre" value={animal?.nombre ?? ''} placeholder="Ej. Max" required class="focus-ring w-full rounded-2xl border border-teal-900/10 bg-white px-4 py-3 font-medium outline-none transition focus:border-teal-800" /></label>
+    <label class="space-y-2 text-sm font-bold text-teal-950">Raza<input name="raza" value={animal?.raza ?? ''} placeholder="Ej. Labrador" required class="focus-ring w-full rounded-2xl border border-teal-900/10 bg-white px-4 py-3 font-medium outline-none transition focus:border-teal-800" /></label>
+    <label class="space-y-2 text-sm font-bold text-teal-950">Edad<input name="edad" type="number" min="0" step="1" value={animal?.edad ?? ''} placeholder="0" required class="focus-ring w-full rounded-2xl border border-teal-900/10 bg-white px-4 py-3 font-medium outline-none transition focus:border-teal-800" /></label>
+    <label class="space-y-2 text-sm font-bold text-teal-950">Sexo<select name="sexo" required class="focus-ring w-full rounded-2xl border border-teal-900/10 bg-white px-4 py-3 font-medium outline-none transition focus:border-teal-800"><option value="">Selecciona</option><option selected={animal?.sexo === 'Hembra'}>Hembra</option><option selected={animal?.sexo === 'Macho'}>Macho</option></select></label>
+    <label class="space-y-2 text-sm font-bold text-teal-950 sm:col-span-2">Tipo de animal<select name="tipoAnimal" required class="focus-ring w-full rounded-2xl border border-teal-900/10 bg-white px-4 py-3 font-medium outline-none transition focus:border-teal-800"><option value="">Selecciona</option><option selected={animal?.tipoAnimal === 'Perro'}>Perro</option><option selected={animal?.tipoAnimal === 'Gato'}>Gato</option></select></label>
+  </div>
+  <div class="flex flex-wrap items-center gap-3 border-t border-teal-900/10 pt-5"><a href="/dashboard" class="focus-ring rounded-full px-5 py-3 text-sm font-bold text-teal-800 hover:bg-teal-900/5">Cancelar</a><button id="submit-animal" type="submit" class="focus-ring rounded-full bg-teal-950 px-6 py-3 text-sm font-extrabold text-white transition hover:bg-teal-800">{mode === 'edit' ? 'Guardar cambios' : 'Registrar animal'}</button></div>
+</form>

@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+
+interface Props { title?: string }
+const { title = 'Refugio | Cuidamos historias' } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Un hogar seguro para cada historia animal." />
+    <title>{title}</title>
+  </head>
+  <body><slot /></body>
+</html>

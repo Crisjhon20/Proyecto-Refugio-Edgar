@@ -1,0 +1,35 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro';
+import Brand from '../components/layout/Brand.astro';
+import Button from '../components/ui/Button.astro';
+---
+<PublicLayout title="Fundacion Angelitos de Edgar | Bolivia">
+  <main class="overflow-hidden bg-teal-900 text-white">
+    <section class="grain relative min-h-[680px] lg:min-h-screen">
+      <div class="absolute -left-32 top-48 h-80 w-80 rounded-full bg-teal-800/70 blur-3xl"></div>
+      <div class="relative mx-auto max-w-7xl px-6 pb-16 pt-6 sm:px-10 lg:px-14 lg:pt-8">
+        <header class="flex items-center justify-between border-b border-white/20 pb-5">
+          <Brand light />
+          <nav class="hidden items-center gap-8 text-[11px] font-extrabold uppercase tracking-[.16em] text-white/65 md:flex" aria-label="Navegacion principal"><a class="hover:text-white" href="#fundacion">La fundacion</a><a class="hover:text-white" href="#creadores">Creadores</a><a class="hover:text-white" href="#contacto">Contacto</a></nav>
+          <a href="/login" class="focus-ring rounded-full border border-white/30 px-4 py-2 text-xs font-extrabold text-white transition hover:bg-white hover:text-teal-950">Acceso admin</a>
+        </header>
+        <div class="grid items-center gap-10 pt-16 lg:grid-cols-[.85fr_1.15fr] lg:gap-4 lg:pt-24">
+          <div class="relative z-10 max-w-xl">
+            <p class="mb-5 flex items-center gap-3 text-xs font-extrabold uppercase tracking-[.24em] text-yellow-300"><span class="h-px w-9 bg-yellow-300"></span> Bolivia</p>
+            <h1 class="display-text max-w-lg text-6xl leading-[.88] text-white sm:text-8xl">Fundacion <em class="text-yellow-300">Angelitos</em> de Edgar.</h1>
+            <p class="mt-8 max-w-md text-base leading-7 text-white/70">Un espacio digital para presentar a la Fundacion Angelitos de Edgar y organizar la informacion de los animales del refugio.</p>
+            <div class="mt-9 flex flex-wrap gap-3"><Button href="/login">Acceso administrativo <span class="ml-2">→</span></Button><Button href="#fundacion" variant="outline">Conocer mas</Button></div>
+          </div>
+          <div class="relative mx-auto w-full max-w-2xl lg:-mr-16">
+            <div class="absolute -right-12 top-6 h-[420px] w-[420px] rounded-[45%] bg-yellow-400 sm:h-[580px] sm:w-[580px]"></div>
+            <div class="relative z-10 mx-auto mt-3 aspect-square max-w-[600px] overflow-hidden rounded-[42%_58%_44%_56%/48%_42%_58%_52%] border-8 border-white/20 bg-yellow-300/10 shadow-2xl"><img src="/images/dog-hero.jpg" alt="Perro rescatado en un espacio exterior" class="h-full w-full object-cover" /><div class="absolute bottom-5 right-5 h-32 w-32 overflow-hidden rounded-[2rem] border-4 border-white shadow-xl sm:h-40 sm:w-40"><img src="/images/cat-hero.jpg" alt="Gato en primer plano" class="h-full w-full object-cover" /></div></div>
+            <div class="absolute bottom-4 left-0 z-20 rounded-2xl border border-white/20 bg-teal-950/70 px-4 py-3 backdrop-blur-sm"><p class="text-sm font-extrabold text-yellow-300">Informacion institucional</p><p class="text-[10px] font-bold uppercase tracking-wider text-white/65">En proceso de verificacion</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fundacion" class="bg-cream px-6 py-24 text-teal-950 sm:px-10 lg:px-14"><div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end"><div><p class="text-xs font-extrabold uppercase tracking-[.25em] text-teal-800">Sobre el proyecto</p><h2 class="display-text mt-4 text-5xl leading-none sm:text-6xl">Una identidad que merece informacion clara.</h2></div><p class="max-w-xl text-lg leading-8 text-teal-900/65">Esta pagina esta preparada para centralizar la informacion de la Fundacion Angelitos de Edgar en Bolivia, sus animales y sus historias.</p></div><div id="verificacion" class="mx-auto mt-16 grid max-w-7xl gap-4 sm:grid-cols-3"><article class="rounded-[2rem] bg-yellow-400 p-7"><span class="text-3xl">✦</span><h3 class="mt-14 text-xl font-extrabold">Nombre identificado</h3><p class="mt-2 text-sm leading-6 text-teal-950/65">Fundacion Angelitos de Edgar, Bolivia.</p></article><article class="rounded-[2rem] bg-teal-900 p-7 text-white"><span class="text-3xl">⌁</span><h3 class="mt-14 text-xl font-extrabold">Datos por confirmar</h3><p class="mt-2 text-sm leading-6 text-white/65">Ubicacion, contacto, historia y mision oficial requieren validacion.</p></article><article class="rounded-[2rem] border border-teal-900/10 bg-white p-7"><span class="text-3xl">♡</span><h3 class="mt-14 text-xl font-extrabold">Proximo paso</h3><p class="mt-2 text-sm leading-6 text-teal-900/65">Agregar fuentes oficiales antes de publicar informacion institucional.</p></article></div></section>
+    <section id="creadores" class="relative overflow-hidden bg-teal-950 px-6 py-20 text-white sm:px-10 lg:px-14 lg:py-28"><div class="absolute -right-32 -top-32 h-80 w-80 rounded-full border-[42px] border-[#1677c8]/30"></div><div class="absolute bottom-0 left-0 h-1 w-2/5 bg-[#e11d2e]"></div><div class="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[.65fr_1.35fr] lg:gap-20"><div class="mx-auto grid h-56 w-56 place-items-center rounded-[2.75rem] bg-white p-5 shadow-2xl shadow-black/20 sm:h-64 sm:w-64"><img src="/images/escudo-infosis.png" width="256" height="256" loading="lazy" alt="Escudo de la Dirección de Carrera de Informática y Sistemas de la FICH, UAGRM" class="h-full w-full object-contain" /></div><div><p class="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[.24em] text-[#62b5ff]"><span class="h-px w-9 bg-[#62b5ff]"></span> Proyecto estudiantil · 2026</p><h2 class="display-text mt-5 max-w-3xl text-5xl leading-[.94] sm:text-7xl">Creado para <em class="text-yellow-300">cuidar.</em> Diseñado para transformar.</h2><p class="mt-7 max-w-2xl text-base leading-7 text-white/70">Este sistema fue desarrollado por estudiantes de la carrera de Informática y Sistemas de la FICH, UAGRM, durante el INFOSIS BUILD FEST 2026.</p><p class="mt-4 max-w-2xl text-sm leading-6 text-white/50">Una experiencia de aprendizaje y creación tecnológica aplicada a una causa que importa: mejorar la gestión y visibilidad de los animales del refugio.</p><div class="mt-8 flex flex-wrap items-center gap-5"><a href="https://infosist.org" target="_blank" rel="noopener noreferrer" class="focus-ring inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-extrabold text-teal-950 transition hover:bg-yellow-300">Conocer INFOSIS <span>↗</span></a><span class="text-xs font-bold uppercase tracking-[.16em] text-white/40">FICH · UAGRM · Camiri, Bolivia</span></div></div></div></section>
+    <footer id="contacto" class="border-t border-white/10 bg-teal-950 px-6 py-8 text-sm text-white/60 sm:px-10 lg:px-14"><div class="mx-auto flex max-w-7xl flex-wrap justify-between gap-4"><span>Fundacion Angelitos de Edgar · Bolivia</span><span>Informacion pendiente de validacion oficial.</span></div></footer>
+  </main>
+</PublicLayout>

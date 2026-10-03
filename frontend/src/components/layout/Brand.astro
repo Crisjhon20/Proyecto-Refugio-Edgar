@@ -1,0 +1,8 @@
+---
+interface Props { light?: boolean }
+const { light = false } = Astro.props;
+---
+<a href="/" class={`focus-ring inline-flex items-center gap-3 ${light ? 'text-white' : 'text-teal-950'}`}>
+  <span class="grid h-10 w-10 place-items-center rounded-xl bg-yellow-400 text-xl">✦</span>
+  <span class="leading-none"><strong class="block text-lg font-extrabold tracking-tight">Refugio</strong><small class={`text-[10px] font-bold uppercase tracking-[.2em] ${light ? 'text-white/55' : 'text-teal-800/65'}`}>Huellas con historia</small></span>
+</a>
